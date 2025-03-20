@@ -1,2 +1,13 @@
-# Vite_TS_MatTW
-Plantilla para  inicar proyectos con Vite Typescript y Material Tailwind
+# React + Typescript + Material Tailwind + Redux + React Query
+
+Plantilla para  inicar proyectos con Vite 🚀
+
+---
+
+## Instalación
+
+Ejecuta los siguientes comandos:
+
+```sh
+npm install
+npm run dev
