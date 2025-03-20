@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true, // Allows you to import JSON files as modules. 
+    "esModuleInterop": true, // Allows you to import CommonJS modules as default imports.
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", ".eslintrc.cjs", "postcss.config.cjs"]
+} 
