@@ -1,6 +1,11 @@
-# React + Typescript + Material Tailwind + Redux + React Query
-
-Plantilla para  inicar proyectos con Vite 🚀
+# Plantilla para  inicar proyectos con Vite 🚀
++ React
++ Typescript
++ Material Tailwind
++ EsLint
++ Vitest
++ Redux
++ React Query
 
 ---
 
