@@ -1,4 +1,9 @@
 {
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
   "compilerOptions": {
     "strict": true,
     "moduleResolution": "node",
@@ -6,7 +11,7 @@
     "esModuleInterop": true, // Allows you to import CommonJS modules as default imports.
     "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "types": ["vitest/globals", "@testing-library/jest-dom"],
+    "types": ["vitest", "@testing-library/jest-dom"],
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", ".eslintrc.cjs", "postcss.config.cjs"]
 } 

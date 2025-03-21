@@ -5,6 +5,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslintPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
+import prettierConfig from 'eslint-config-prettier';
 
 export default [
   {
@@ -19,6 +20,23 @@ export default [
         tsconfigRootDir: process.cwd(),
       },
     },
+  },
+  {
+    extends: [
+      'eslint:recommended',
+      'plugin:react/recommended',
+      'plugin:react-hooks/recommended',
+      'plugin:@typescript-eslint/recommended',
+      'plugin:@typescript-eslint/recommended-requiring-type-checking',
+      'plugin:@typescript-eslint/strict-type-checked',
+      'plugin:@typescript-eslint/stylistic-type-checked',
+      'plugin:prettier/recommended', // Se añade Prettier
+    ],
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
     plugins: {
       react,
       'react-hooks': reactHooks,
@@ -26,17 +44,10 @@ export default [
       '@typescript-eslint': tseslintPlugin,
     },
     rules: {
-      ...js.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...tseslintPlugin.configs.recommended.rules,
-      ...tseslintPlugin.configs['recommended-requiring-type-checking'].rules,
-      ...tseslintPlugin.configs['strict-type-checked'].rules,
-      ...tseslintPlugin.configs['stylistic-type-checked'].rules,
-      ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      'prettier/prettier': 'error', // 🔹 Prettier mostrará errores si el código no está formateado
-      ...prettierConfig.rules, // 🔹 Desactiva reglas de ESLint que podrían chocar con Prettier
+      'prettier/prettier': 'error', // Prettier ahora muestra errores si el código no está formateado
+      ...prettierConfig.rules, // Desactiva reglas de ESLint que podrían chocar con Prettier
     },
   },
 ];
